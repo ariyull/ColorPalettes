@@ -2,37 +2,168 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  color: rgb(0, 0, 0);
+}
+a:hover {
+   color: rgb(255, 255, 255)
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.boxcontent1 {
+  background-color: rgb(170, 247, 170);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.boxcontent2 {
+  background-color: rgb(112, 133, 112);
+  color: rgb(255, 255, 255);
 }
 
-.App-link {
-  color: #61dafb;
+
+.image-standard-size{
+  width: 18rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-standard-size{
+  width:22rem;
+  max-height: 400px;
+  overflow: clip
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~COLOR PICKER */
+
+.circle {
+  height: 70px;
+  width: 70px;
+  border-radius: 45%;
+  padding: 20px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~color picker 1 */
+
+.colorpicker1-1 {
+  background-color: rgb(85, 139, 191);
+  height: 70px;
+  width: 70px;
+  border-radius: 45%;
+  padding: 20px;
+}
+
+.colorpicker1-2 {
+  background-color: rgb(193, 209, 92);
+  height: 70px;
+  width: 70px;
+  border-radius: 45%;
+  padding: 20px;
+}
+
+.colorpicker1-3 {
+  background-color: rgb(93, 92, 63);
+  height: 70px;
+  width: 70px;
+  border-radius: 45%;
+  padding: 20px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~ color picker 2 */
+
+.colorpicker2-1 {
+  background-color: rgb(150, 128, 69);
+  height: 70px;
+  width: 70px;
+  border-radius: 45%;
+  padding: 20px;
+}
+
+.colorpicker2-2 {
+  background-color: rgb(253, 49, 101);
+  height: 70px;
+  width: 70px;
+  border-radius: 45%;
+  padding: 20px;
+}
+
+.colorpicker2-3 {
+  background-color: rgb(255, 156, 87);
+  height: 70px;
+  width: 70px;
+  border-radius: 45%;
+  padding: 20px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~ color picker 3 */
+
+.colorpicker3-1 {
+  background-color: rgb(75, 56, 39);
+  height: 70px;
+  width: 70px;
+  border-radius: 45%;
+  padding: 20px;
+}
+
+.colorpicker3-2 {
+  background-color: rgb(241, 193, 86);
+  height: 70px;
+  width: 70px;
+  border-radius: 45%;
+  padding: 20px;
+}
+
+.colorpicker3-3 {
+  background-color: rgb(147, 168, 74);
+  height: 70px;
+  width: 70px;
+  border-radius: 45%;
+  padding: 20px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~ color picker 4 */
+
+.colorpicker4-1 {
+  background-color: rgb(32, 37, 59);
+  height: 70px;
+  width: 70px;
+  border-radius: 45%;
+  padding: 20px;
+}
+
+.colorpicker4-2 {
+  background-color: rgb(176, 203, 230);
+  height: 70px;
+  width: 70px;
+  border-radius: 45%;
+  padding: 20px;
+}
+
+.colorpicker4-3 {
+  background-color: rgb(200, 211, 225);
+  height: 70px;
+  width: 70px;
+  border-radius: 45%;
+  padding: 20px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~ color picker 5 */
+
+.colorpicker5-1 {
+  background-color: rgb(16, 23, 65);
+  height: 70px;
+  width: 70px;
+  border-radius: 45%;
+  padding: 20px;
+}
+
+.colorpicker5-2 {
+  background-color: rgb(216, 215, 209);
+  height: 70px;
+  width: 70px;
+  border-radius: 45%;
+  padding: 20px;
+}
+
+.colorpicker5-3 {
+  background-color: rgb(13, 57, 64);
+  height: 70px;
+  width: 70px;
+  border-radius: 45%;
+  padding: 20px;
 }
