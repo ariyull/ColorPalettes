@@ -1,4 +1,4 @@
-import React, { Component, useState, Switch, Route,   } from 'react';
+import React, { Component} from 'react';
 import { Nav, Navbar, NavbarBrand, NavItem, NavbarToggler, Collapse, Button, Modal, ModalHeader, ModalBody,
     Form, FormGroup, Input, Label, NavLink, Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
@@ -36,7 +36,7 @@ class Header extends Component {
                                         </DropdownMenu>
                                     </Dropdown>
                                 </li>
-                                <li className="nav-item">    
+                                <li className="nav-item home-btn">    
                                     <a className="nav-link" href="home">
                                         <button className="btn">Home</button>
                                     </a>
@@ -49,6 +49,7 @@ class Header extends Component {
 
                                 
                 </nav>
+                <h1>-header component-</h1>
             </div>
         );
       }

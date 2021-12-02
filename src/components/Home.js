@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
+import SelectedFam from './selectedfam'
 
 class Home extends Component {
     constructor(props) {
         super(props);
         this.state = {
           palettedata: ["placeholder palettedata"],
-          selectedpalcolfam: "colfam was not changed"
+          selectedpalcolfam: "colfam was not selected"
         }
         this.handleClick = this.handleClick.bind(this)
         this.useLink = this.useLink.bind(this)
     };
 
     async handleClick(colfam) {
-        await this.setState({selectedpalid:colfam})
+        await this.setState({selectedpalcolfam:colfam})
         alert("the colfam is " + colfam)
       };
 
@@ -27,17 +28,19 @@ class Home extends Component {
 
     useLink(colfam) {
         let link = `/colfam${colfam}`;
-        return link;
+        return null
+        // return link;
       };    
-   
 
     render() {
         let { palettedata } = this.state;
-        
-        
+
+        if (this.state.selectedpalcolfam === "colfam was not selected") {
         return (
             
             <div className="container">
+
+
                 <div className="row">
                     {
                         palettedata.map(palettedata => 
@@ -94,7 +97,11 @@ class Home extends Component {
                     }
                 </div>
             </div>
-        )
+        )} else { return(<div> <h1> this was selected: {this.state.selectedpalcolfam}</h1>
+                    <SelectedFam selected = {this.state.selectedpalcolfam}/>
+                    </div>) };
+
+        
     }
 
 }

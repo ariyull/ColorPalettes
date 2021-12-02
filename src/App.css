@@ -6,26 +6,38 @@ a {
   color: rgb(0, 0, 0);
 }
 a:hover {
-   color: rgb(255, 255, 255)
+   color: rgb(248, 248, 248)
+}
+
+a:visited{
+  color:rgb(0, 0, 0)
+}
+
+.home-btn {
+  background-color:rgba(255, 255, 255, 0.274)
 }
 
 .boxcontent1 {
-  background-color: rgb(170, 247, 170);
+  background-color: rgba(192, 211, 197, 0.212);
 }
 
 .boxcontent2 {
-  background-color: rgb(112, 133, 112);
-  color: rgb(255, 255, 255);
+  background-color: rgba(192, 211, 197, 0.212);
+  color: rgba(143, 143, 143, 0.212);
 }
 
+.no-padding {
+  margin: 0
+}
 
 .image-standard-size{
   width: 18rem;
 }
 
 .card-standard-size{
-  width:22rem;
-  max-height: 400px;
+  width:18rem;
+  height: 25rem;
+  max-height: 25rem;
   overflow: clip
 }
 
@@ -38,132 +50,3 @@ a:hover {
   padding: 20px;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~color picker 1 */
-
-.colorpicker1-1 {
-  background-color: rgb(85, 139, 191);
-  height: 70px;
-  width: 70px;
-  border-radius: 45%;
-  padding: 20px;
-}
-
-.colorpicker1-2 {
-  background-color: rgb(193, 209, 92);
-  height: 70px;
-  width: 70px;
-  border-radius: 45%;
-  padding: 20px;
-}
-
-.colorpicker1-3 {
-  background-color: rgb(93, 92, 63);
-  height: 70px;
-  width: 70px;
-  border-radius: 45%;
-  padding: 20px;
-}
-
-/*~~~~~~~~~~~~~~~~~~~~~~ color picker 2 */
-
-.colorpicker2-1 {
-  background-color: rgb(150, 128, 69);
-  height: 70px;
-  width: 70px;
-  border-radius: 45%;
-  padding: 20px;
-}
-
-.colorpicker2-2 {
-  background-color: rgb(253, 49, 101);
-  height: 70px;
-  width: 70px;
-  border-radius: 45%;
-  padding: 20px;
-}
-
-.colorpicker2-3 {
-  background-color: rgb(255, 156, 87);
-  height: 70px;
-  width: 70px;
-  border-radius: 45%;
-  padding: 20px;
-}
-
-/*~~~~~~~~~~~~~~~~~~~~~~ color picker 3 */
-
-.colorpicker3-1 {
-  background-color: rgb(75, 56, 39);
-  height: 70px;
-  width: 70px;
-  border-radius: 45%;
-  padding: 20px;
-}
-
-.colorpicker3-2 {
-  background-color: rgb(241, 193, 86);
-  height: 70px;
-  width: 70px;
-  border-radius: 45%;
-  padding: 20px;
-}
-
-.colorpicker3-3 {
-  background-color: rgb(147, 168, 74);
-  height: 70px;
-  width: 70px;
-  border-radius: 45%;
-  padding: 20px;
-}
-
-/*~~~~~~~~~~~~~~~~~~~~~~ color picker 4 */
-
-.colorpicker4-1 {
-  background-color: rgb(32, 37, 59);
-  height: 70px;
-  width: 70px;
-  border-radius: 45%;
-  padding: 20px;
-}
-
-.colorpicker4-2 {
-  background-color: rgb(176, 203, 230);
-  height: 70px;
-  width: 70px;
-  border-radius: 45%;
-  padding: 20px;
-}
-
-.colorpicker4-3 {
-  background-color: rgb(200, 211, 225);
-  height: 70px;
-  width: 70px;
-  border-radius: 45%;
-  padding: 20px;
-}
-
-/*~~~~~~~~~~~~~~~~~~~~~~ color picker 5 */
-
-.colorpicker5-1 {
-  background-color: rgb(16, 23, 65);
-  height: 70px;
-  width: 70px;
-  border-radius: 45%;
-  padding: 20px;
-}
-
-.colorpicker5-2 {
-  background-color: rgb(216, 215, 209);
-  height: 70px;
-  width: 70px;
-  border-radius: 45%;
-  padding: 20px;
-}
-
-.colorpicker5-3 {
-  background-color: rgb(13, 57, 64);
-  height: 70px;
-  width: 70px;
-  border-radius: 45%;
-  padding: 20px;
-}
