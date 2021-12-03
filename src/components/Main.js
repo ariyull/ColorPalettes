@@ -16,7 +16,6 @@ import Footer from './Footer'
 import Home from './Home'
 import Form from './FormTest'
 
-
 function Main() {
     
     return (

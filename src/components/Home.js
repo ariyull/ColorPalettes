@@ -9,7 +9,7 @@ class Home extends Component {
           selectedpalcolfam: "colfam was not selected"
         }
         this.handleClick = this.handleClick.bind(this)
-        this.useLink = this.useLink.bind(this)
+
     };
 
     async handleClick(colfam) {
@@ -26,11 +26,7 @@ class Home extends Component {
         )
     }
 
-    useLink(colfam) {
-        let link = `/colfam${colfam}`;
-        return null
-        // return link;
-      };    
+  
 
     render() {
         let { palettedata } = this.state;
@@ -40,7 +36,9 @@ class Home extends Component {
             
             <div className="container">
 
-
+                <div className="row">
+                    <h2>all palettes:</h2>
+                </div>
                 <div className="row">
                     {
                         palettedata.map(palettedata => 
@@ -55,7 +53,7 @@ class Home extends Component {
                                     <div className="container justify-content-center">
                                         <div className="row ">
                                             <div className="col"> 
-                                                <a href= {this.useLink(palettedata.col1fam)}>
+                                                
                                                     <div className="circle" style={ { backgroundColor: palettedata.col1rgb } } 
                                                         onClick={() => {
                                                         const colfam = palettedata.col1fam;
@@ -63,10 +61,10 @@ class Home extends Component {
                                                         }}> 
                                                         <p>1</p>
                                                     </div> 
-                                                </a>
+                                                
                                             </div>
                                             <div className="col">
-                                                <a  href= {this.useLink(palettedata.col2fam)}  >
+                                               
                                                     <div className="circle" style={ { backgroundColor: palettedata.col2rgb } }
                                                     onClick={() => {
                                                         const colfam = palettedata.col2fam;
@@ -74,17 +72,17 @@ class Home extends Component {
                                                         }}> 
                                                             <p>2</p>
                                                     </div> 
-                                                </a>
+                                                
                                             </div>
                                             <div className="col">
-                                                <a href= {this.useLink(palettedata.col3fam)} >
+                                               
                                                     <div className="circle" style={ { backgroundColor: palettedata.col3rgb } }  onClick={() => {
                                                             const colfam = palettedata.col3fam;
                                                             this.handleClick(colfam);
                                                             }}> 
                                                         <p>3</p>
                                                     </div>
-                                                </a>
+                                            
                                             </div>
                                         </div>
                                     </div>
@@ -97,8 +95,8 @@ class Home extends Component {
                     }
                 </div>
             </div>
-        )} else { return(<div> <h1> this was selected: {this.state.selectedpalcolfam}</h1>
-                    <SelectedFam selected = {this.state.selectedpalcolfam}/>
+        )} else { return(<div> 
+                    <SelectedFam selectedpalcolfam = {this.state.selectedpalcolfam} initial = {this.state.selectedpalcolfam}/>
                     </div>) };
 
         

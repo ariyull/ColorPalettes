@@ -1,49 +1,41 @@
 import React, { Component } from 'react';
+import getPalettes from './getpalettes'
 
 class SelectedFam extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          selectedpalcolfam: this.props.selected,
           sampledata: ["placeholder sampledata"],
           palettedata: []
         };
         this.handleClick = this.handleClick.bind(this)
-        this.useLink = this.useLink.bind(this)
       };
 
-    async componentDidMount() {
-        const result = await fetch(
-            `http://localhost:3001/palettes/${this.props.selected}`, { method: 'GET' }
-            )
-        const fetched_info = await result.json();
-        await this.setState({sampledata:fetched_info},
-        )
-        const colfamresult = await fetch(
-            'http://localhost:3001', { method: 'GET' }
-            )
-        const colfamfetchedinfo = await colfamresult.json();
-        this.setState({palettedata:colfamfetchedinfo.palettes}
-        )
+    
+
+    async componentDidMount() {   
+        let selectedcolfam = this.props.selectedpalcolfam
+        let fetched_info = await getPalettes(selectedcolfam);
+        this.setState({sampledata:fetched_info})
     }
     
-    async handleClick(colfam) {
-        await this.setState({selectedpalcolfam:colfam})
-        alert("the colfam is " + colfam)
+    async handleClick(colfam) { 
+        await this.setState({selectedpalcolfam:colfam});
+        alert("this.state.selectedpalcolfam is " + this.state.selectedpalcolfam);
+        let newselection = this.state.selectedpalcolfam;
+        let fetched_info = await getPalettes(newselection);
+        this.setState({sampledata:fetched_info})
       };
 
-      useLink(colfam) {
-        let link = `/colfam${colfam}`;
-        return null;
-      };    
+
 
 render() {
     let { sampledata } = this.state;
+    
     return (
-        
         <div>
             <div className="container">
-                <h1  className="boxcontent1"> colors that match: {this.props.selected} </h1>
+                <h1  className="boxcontent1"> colors that match: {this.state.selectedpalcolfam} </h1>
                 <div className = "row">
                 {
                     sampledata.map(sampledata => 
