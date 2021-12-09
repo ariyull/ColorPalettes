@@ -16,34 +16,53 @@ class Form extends React.Component {
       };
   
       this.handleChange = this.handleChange.bind(this);
+      this.handleImageChange = this.handleImageChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
+      
     };
   
     handleChange(event) {
       this.setState({[event.target.name]: event.target.value});
     };
+
+    handleImageChange(e) {
+      this.setState({image:e.target.files[0]});
+  }
   
     async handleSubmit(event) {
         event.preventDefault();
-        const post_object = { 
-                              name: this.state.name,
-                              col1rgb: this.state.col1rgb,
-                              col2rgb: this.state.col2rgb,
-                              col3rgb: this.state.col3rgb,
-                              col1fam: this.state.col1fam,
-                              col2fam: this.state.col2fam,
-                              col3fam: this.state.col3fam,
-                              image: this.state.image };
-        alert(JSON.stringify(post_object));
+        const formData = new FormData();
+          await formData.append('image',this.state.image)
+            await formData.append('name', this.state.name)
+              await formData.append('col1rgb', this.state.col1rgb)
+                await formData.append('col2rgb',this.state.col2rgb)
+                  await formData.append('col3rgb',  this.state.col3rgb)
+                    await formData.append('col1fam', this.state.col1fam)
+                      await formData.append('col2fam', this.state.col2fam)
+                        await formData.append('col3fam', this.state.col3fam)
+        
+        // const post_object = { 
+        //                       name: this.state.name,
+        //                       col1rgb: this.state.col1rgb,
+        //                       col2rgb: this.state.col2rgb,
+        //                       col3rgb: this.state.col3rgb,
+        //                       col1fam: this.state.col1fam,
+        //                       col2fam: this.state.col2fam,
+        //                       col3fam: this.state.col3fam,
+        //                       image: this.state.image,
+        //                     };
+
+        
         const response = await fetch(
             'http://localhost:3001/palettepost', { method: 'POST',
                                                 headers: {
-                                                    'Accept': 'application/json',
-                                                    'Content-Type': 'application/json'
+                                                 
                                                 },
-                                                body: JSON.stringify(post_object) },
+                                                body: formData },
         )
-        alert(JSON.stringify(response))
+        this.setState({ response: response })
+        alert(JSON.stringify('this was submitted as formData ' + 
+        JSON.stringify(formData)))
       };
 
 
@@ -98,7 +117,7 @@ class Form extends React.Component {
               <div className="col">
                 <label>
                 image:   
-                  <textarea name="image" value={this.state.image} onChange={this.handleChange} />
+                <input type="file" name="image" onChange= {this.handleImageChange} />
                 </label>  
               </div>
               <div>

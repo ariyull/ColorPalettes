@@ -1,0 +1,1 @@
+console.log("the  __dirname is " + __dirname)   
