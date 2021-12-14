@@ -26,22 +26,25 @@ class Header extends Component {
                                 <li className="nav-item nav-link">
                                     <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                                         <DropdownToggle tag="span" onClick={this.toggle} data-toggle="dropdown" aria-expanded={this.state.dropdownOpen}>
-                                            <button className="btn"> Dropdown button </button>
+                                            <button className="btn circle"> Dropdown </button>
                                         </DropdownToggle>
-                                        <DropdownMenu>
-                                            <DropdownItem > dropdown item 1</DropdownItem>
-                                            <DropdownItem > dropdown item 2</DropdownItem>
-                                            <DropdownItem > dropdown item 3</DropdownItem>
-                                            <DropdownItem > dropdown item 4</DropdownItem>
-                                        </DropdownMenu>
+                                      
+                                            <DropdownMenu >
+                                                <DropdownItem > dropdown item 1</DropdownItem>
+                                                <DropdownItem > dropdown item 2</DropdownItem>
+                                                <DropdownItem > dropdown item 3</DropdownItem>
+                                                <DropdownItem > dropdown item 4</DropdownItem>
+                                            </DropdownMenu>
+                                        
                                     </Dropdown>
+                                   
                                 </li>
-                                <li className="nav-item home-btn">    
+                                <li className="nav-item home-btn circle">    
                                     <a className="nav-link" href="home">
                                         <button className="btn">Home</button>
                                     </a>
                                 </li>
-                                <li className="nav-item">    
+                                <li className="nav-item circle">    
                                     <a className="nav-link" href="form">
                                         <button className="btn">Form</button>
                                     </a>
