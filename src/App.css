@@ -41,8 +41,6 @@ a:visited{
   overflow: clip
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~COLOR PICKER */
-
 .circle {
   height: 70px;
   width: 70px;
@@ -60,3 +58,50 @@ a:visited{
   75% { transform: scale(0.95, 1.05); }
 }
 
+
+.form-container {
+  background: radial-gradient(#69ebf6, #dba9db, #69ebf6, #dba9db);
+  width: 35%;
+  margin-left: 33%;
+  margin-right: 33%;
+  padding: 1%;
+  border-radius: 5%;
+  transition: background 2s, height 2s, background-color 2s, transform 2s;
+}
+
+  
+@media only screen and (max-width: 600px) {
+  .form-container  {
+    background: radial-gradient(#69ebf6, #dba9db, #69ebf6, #dba9db);
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+    padding: 1%;
+    border-radius: 5%;
+    transition: background 2s, height 2s, background-color 2s, transform 2s;
+  }
+}
+
+.form-container:focus {
+  background: radial-gradient(#7af669, #b1a9db, #7af669, #b1a9db);
+}
+
+form{
+  font-weight: bold;
+  color:rgb(255, 255, 255)
+}
+
+.special-text {
+  background-image: linear-gradient(violet, rgb(250, 114, 60), blue, green, yellow, orange, red);   -webkit-background-clip: text;
+  color: transparent;
+}
+
+.top-margin{
+  margin-top:.6%
+}
+
+@media only screen and (max-width: 600px){
+  .top-margin{
+    margin-top:2.55%
+  }
+}

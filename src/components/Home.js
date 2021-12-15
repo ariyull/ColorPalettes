@@ -96,7 +96,7 @@ class Home extends Component {
                 </div>
             </div>
         )} else { return(<div> 
-                    <SelectedFam selectedpalcolfam = {this.state.selectedpalcolfam} initial = {this.state.selectedpalcolfam}/>
+                    <SelectedFam selectedpalcolfam = {this.state.selectedpalcolfam} />
                     </div>) };
 
         

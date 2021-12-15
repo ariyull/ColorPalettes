@@ -5,14 +5,10 @@ class SelectedFam extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          sampledata: ["placeholder sampledata"],
-          palettedata: []
+          sampledata: ["placeholder sampledata"]
         };
         this.handleClick = this.handleClick.bind(this)
       };
-
-    
-
     async componentDidMount() {   
         let selectedcolfam = this.props.selectedpalcolfam
         let fetched_info = await getPalettes(selectedcolfam);
